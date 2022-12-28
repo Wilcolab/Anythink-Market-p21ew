@@ -10,7 +10,7 @@ Make sure your server is up and running to serve requests.
 
 - Home page (URL: /#/ )
   - List of tags
-  - List of items pulled from either Feed, Global, or by Tag
+  - List of items pulled from either Feed, Global, by Tag, or by Title
   - Pagination for list of items
 - Sign in/Sign up pages (URL: /#/login, /#/register )
   - Use JWT (store the token in localStorage)
