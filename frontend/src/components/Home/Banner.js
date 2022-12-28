@@ -1,17 +1,22 @@
 import React from "react";
-import { agent } from "superagent";
+import agent from "../../agent";
 import logo from "../../imgs/logo.png";
 
 const Banner = ({ onTitleSearch }) => {
 
-  handleSearch = (event) => {
+  const handleSearch = (event) => {
     const searchString = event.target.value;
-
-    if (searchString >= 3) {
+    if (searchString.length > 2) {
       onTitleSearch(
         searchString,
         (page) => agent.Items.byTitle(searchString, page),
         agent.Items.byTitle(searchString)
+      );
+    } else {
+      onTitleSearch(
+        "",
+        (page) => agent.Items.byTitle("", page),
+        agent.Items.byTitle("")
       );
     }
   }
