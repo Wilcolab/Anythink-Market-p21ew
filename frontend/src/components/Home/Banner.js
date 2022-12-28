@@ -31,7 +31,7 @@ const Banner = ({ onTitleSearch }) => {
             <span id="get-part" className="col-form-label">get</span>
           </div>
           <div className="col-5 input-group">
-            <input type="search" className="form-control py-2 border-right-0 border" placeholder="What is it that you truly desire?" onChange={handleSearch}></input>
+            <input type="search" id="search-box" className="form-control py-2 border-right-0 border" placeholder="What is it that you truly desire?" onChange={handleSearch}></input>
             <span className="input-group-append bg-transparent">
               <i class="bi bi-search input-group-text bg-white text-primary"></i>
             </span>
